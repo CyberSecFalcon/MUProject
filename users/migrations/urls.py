@@ -1,4 +1,4 @@
-# In the urls.py file within your app (accounts/urls.py), define URL patterns for each of the views that you created:
+# In the urls.py file within your app (users/urls.py), define URL patterns for each of the views that you created:
 
 from django.urls import path
 from . import views
