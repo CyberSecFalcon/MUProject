@@ -1,0 +1,36 @@
+# In the templates directory within your app (users/templates/accounts), create HTML templates for the signup, login,
+logout, and profile update pages:
+
+# signup.html
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Sign Up</button>
+</form>
+
+# corporate_signup.html
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Sign Up</button>
+</form>
+
+# login.html
+{% if error_message %}
+<p>{{ error_message }}</p>
+{% endif %}
+<form method="post">
+    {% csrf_token %}
+    <label for="username">Username:</label><br>
+    <input type="text" name="username" placeholder="Username"><br>
+    <label for="password">Password:</label><br>
+    <input type="password" name="password" placeholder="Password"><br><br>
+    <button type="submit">Log In</button>
+</form>
+
+# profile.html
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Update Profile</button>
+</form>
